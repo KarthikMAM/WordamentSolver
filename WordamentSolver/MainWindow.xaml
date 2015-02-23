@@ -1,0 +1,44 @@
+﻿<Window x:Class="WordamentSolver.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Wordament Solver" Height="350" Width="525" ResizeMode="CanMinimize" Background="Chocolate" ToolTip="Focus an item to display the Help content">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="200*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+        </Grid.RowDefinitions>
+        <Button Name="Button00" BorderThickness="5" BorderBrush="Coral" Background="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Width="50" Height="50" Click="Button_Click" IsEnabled="False"/>
+        <Button Name="Button01" BorderThickness="5" BorderBrush="Coral" Background="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Width="50" Height="50" Click="Button_Click" IsEnabled="False"/>
+        <Button Name="Button02" BorderThickness="5" BorderBrush="Coral" Background="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="2" Width="50" Height="50" Click="Button_Click" IsEnabled="False"/>
+        <Button Name="Button03" BorderThickness="5" BorderBrush="Coral" Background="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="3" Width="50" Height="50" Click="Button_Click" IsEnabled="False"/>
+        <Button Name="Button10" BorderThickness="5" BorderBrush="Coral" Background="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Width="50" Height="50" Click="Button_Click" IsEnabled="False"/>
+        <Button Name="Button11" BorderThickness="5" BorderBrush="Coral" Background="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Width="50" Height="50" Click="Button_Click" IsEnabled="False"/>
+        <Button Name="Button12" BorderThickness="5" BorderBrush="Coral" Background="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" Width="50" Height="50" Click="Button_Click" IsEnabled="False"/>
+        <Button Name="Button13" BorderThickness="5" BorderBrush="Coral" Background="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="3" Width="50" Height="50" Click="Button_Click" IsEnabled="False"/>
+        <Button Name="Button20" BorderThickness="5" BorderBrush="Coral" Background="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Width="50" Height="50" Click="Button_Click" IsEnabled="False"/>
+        <Button Name="Button21" BorderThickness="5" BorderBrush="Coral" Background="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Width="50" Height="50" Click="Button_Click" IsEnabled="False"/>
+        <Button Name="Button22" BorderThickness="5" BorderBrush="Coral" Background="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="2" Width="50" Height="50" Click="Button_Click" IsEnabled="False"/>
+        <Button Name="Button23" BorderThickness="5" BorderBrush="Coral" Background="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="3" Width="50" Height="50" Click="Button_Click" IsEnabled="False"/>
+        <Button Name="Button30" BorderThickness="5" BorderBrush="Coral" Background="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Width="50" Height="50" Click="Button_Click" IsEnabled="False"/>
+        <Button Name="Button31" BorderThickness="5" BorderBrush="Coral" Background="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Width="50" Height="50" Click="Button_Click" IsEnabled="False"/>
+        <Button Name="Button32" BorderThickness="5" BorderBrush="Coral" Background="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="2" Width="50" Height="50" Click="Button_Click" IsEnabled="False"/>
+        <Button Name="Button33" BorderThickness="5" BorderBrush="Coral" Background="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="3" Width="50" Height="50" Click="Button_Click" IsEnabled="False"/>
+        
+        <Button Name="Go"       BorderThickness="5" BorderBrush="BlueViolet" Background="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="3" Width="50" Height="44" Click="Go_Click" IsEnabled="False" ToolTip="Click on this to begin"/>
+        
+        <TextBox Name="LetterArraySource" VerticalContentAlignment="Center" BorderThickness="5" FontStyle="Italic" Background="AliceBlue" FontSize="12" BorderBrush="Blue" Grid.ColumnSpan="3" HorizontalAlignment="Center" Height="44" TextWrapping="Wrap" VerticalAlignment="Center" Width="190" Text="Type the sequence here" TextChanged="LetterArraySource_TextChanged" GotFocus="LetterArraySource_GotFocus" PreviewKeyDown="LetterArraySource_PreviewKeyDown" LostFocus="LetterArraySource_LostFocus" ToolTip="Have 16 letters in this text box and press ENTER key or click on Go button"/>
+        <ListBox Name="WordList" ScrollViewer.VerticalScrollBarVisibility="Visible" BorderThickness="5" BorderBrush="Blue" Background="AliceBlue" Grid.Column="4" HorizontalAlignment="Left" Height="278" Margin="10,10,0,0" Grid.RowSpan="5" VerticalAlignment="Top" Width="215" FontSize="20" SelectionChanged="WordList_SelectionChanged" MouseDoubleClick="WordList_MouseDoubleClick" ToolTip="1. Select an item to get the sequence &#xD;&#xA;2. Double click to look up the word in Google"/>
+        <Label  Name="Trademark" Content="©Kappspot" HorizontalAlignment="Left" VerticalAlignment="Bottom" HorizontalContentAlignment="Right" Grid.Column="4" Margin="11,34,0,0" Grid.Row="4" Width="215"/>
+        <Slider Name="TextSize" Maximum="300" Minimum="100" Value="200" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="115" Height="20" Grid.Column="4" Margin="10,0,0,0" Grid.Row="4" ValueChanged="TextSize_ValueChanged" ToolTip="Change the font size by moving the slider"/>
+    </Grid>
+</Window>
